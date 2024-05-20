@@ -1,5 +1,5 @@
 {
-  "name": "vwo-node-sdk",
+  "name": "@PINCHme/vwo-node-sdk",
   "version": "1.68.0",
   "description": "VWO Node SDK for server-side Testing",
   "scripts": {
@@ -33,9 +33,12 @@
     "test:prod": "jest --config=jest.config.prod.js",
     "test": "yarn test:prod"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wingify/vwo-node-sdk"
+    "url": "https://github.com/PINCHme/vwo-node-sdk"
   },
   "author": "dev@wingify.com",
   "license": "Apache-2.0",
