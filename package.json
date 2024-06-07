@@ -1,8 +1,9 @@
 {
-  "name": "@PINCHme/vwo-node-sdk",
+  "name": "@pinchme/vwo-node-sdk",
   "version": "1.68.1-0",
   "description": "VWO Node SDK for server-side Testing",
   "scripts": {
+    "co:login": "aws codeartifact login --tool npm --repository npm --domain npm --namespace @pinchme",
     "build": "yarn build:dev && yarn build:prod",
     "build:dev": "webpack --mode=development",
     "build:dev-watch": "webpack --mode=development --watch",
@@ -28,13 +29,11 @@
     "release:patch": "npm version patch",
     "release:minor": "npm version minor",
     "release:major": "npm version major",
+    "release": "yarn co:login && npm publish",
     "start": "yarn install && cp git-hooks/* .git/hooks/ && chmod -R +x .git/hooks",
     "test:dev": "node --inspect node_modules/jest/bin/jest.js --watch --runInBand --config=jest.config.dev.js --watch --debug --colors --errorOnDeprecated",
     "test:prod": "jest --config=jest.config.prod.js",
     "test": "yarn test:prod"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",

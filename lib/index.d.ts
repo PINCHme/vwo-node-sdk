@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-declare module 'vwo-node-sdk' {
+declare module '@pinchme/vwo-node-sdk' {
   /** Fetches the latest settings file from the VWO servers.
    *
    * @param accountId   AccountId associated with the VWO account.
